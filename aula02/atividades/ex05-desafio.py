@@ -23,4 +23,3 @@ print("A área dos cômodos é diferente?", area_sala != area_quarto)
 print("A soma da área dos cômodos é menor que 50m²?", (area_sala + area_quarto) < 50) 
 print("Será gasto menos de R$1000 em cada cômodo?", valor_quarto < 1000 and valor_sala < 1000) 
 print("Serão necessárias pelo menos 100 unidades de piso em algum dos cômodos?", pisos_sala >= 100 or pisos_quarto >= 100) 
-

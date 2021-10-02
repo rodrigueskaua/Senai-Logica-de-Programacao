@@ -1,0 +1,15 @@
+dist = float(input('Informe a distância (em km) até o detino\n'))
+
+if dist > 0:
+  din = input('Você tem dinheiro? (S/N) ')
+  if din == "S" or din == "s" :
+    if dist <= 500:
+      print(f"Para a distância de {dist}km a opção  recomendada é ir de ônibus.")
+    elif din != "S" or din != "s":
+      if din >= 3:
+        print(f"Para a distância de {dist}km a opção  recomendada é ir a pé.")
+    elif din > 3 and din <= 20:
+      print(f"Para a distância de {dist}km a opção  recomendada é ir de bike.")
+    else: print(f"Para a distância de {dist}km a opção  recomendada é ir de avião.")
+  else:  print(f"Para a distância de {dist}km a opção  recomendada é ir de carona.")
+print('Programa encerado')
