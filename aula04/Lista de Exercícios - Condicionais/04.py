@@ -1,11 +1,35 @@
-"""
-4. Escreva um programa que a pessoa possua saldo inicial de R$5000,00 para uma viagem.
-→ Inicialmente, o programa apresenta duas opções para o usuário viajar: (1) Brasil ou (2) Exterior.
-→ Se o usuário escolher a viagem dentro do país, em seguida deve informar se quer viajar de (1) avião ou (2) cruzeiro.
-→ Se escolher avião, subtraia R$1000,00 do saldo.
-→ Se escolher cruzeiro, subtraia R$5000,00 do saldo. 
-→ Caso o usuário queira a viagem internacional, deve informar se quer viajar de (1) classe econômica ou (2) primeira classe.
-→ Se escolher classe econômica, subtraia R$2000,00 do saldo.
-→ Se a escolha for primeira classe, subtraia R$4000,00 do saldo.
-→ No final, mostre uma mensagem com o saldo restante.
-"""
+saldo = float(5000.00)
+escolha = int(input(f"""Você possui saldo inicial de R${saldo:.2f}
+Para onde você deseja viajar?
+[ 1 ] Brasil
+[ 2 ] Exterior \n"""))
+
+if escolha == 1 or escolha == 2:
+    if escolha == 1:
+        escolha_brasil = int(input(f"""Como quer viajar?
+[ 1 ] Avião
+[ 2 ] Cruzeiro \n"""))
+
+        if escolha_brasil == 1:
+            print(f"Viajando dentro país de avião o saldo restante é R${saldo - 1000:.2f}")
+        elif escolha_brasil == 2:
+            print(f"Viajando dentro país de Cruzeiro o saldo restante é R${saldo - 5000:.2f}")
+        else:
+            print("Erro!, a opção digitada não é válida.")
+
+    elif escolha == 2:
+        escolha_exterior = int(input(f"""Qual classe quer viajar?
+[ 1 ] Classe econômica 
+[ 2 ] Primeira classe \n"""))
+
+        if escolha_exterior == 1:
+            print(f"Viajando para o exterior de classe econômica o saldo restante é R${saldo - 2000:.2f}")
+
+        elif escolha_exterior == 2:
+            print(f"Viajando para o exterior de primeira classe o saldo restante é R${saldo - 4000:.2f}")
+
+        else:
+            print("Erro!, a opção digitada não é válida.")
+else:
+    print("Erro!, a opção digitada não é válida.")
+
