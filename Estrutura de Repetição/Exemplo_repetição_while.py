@@ -18,7 +18,8 @@ while salario < 15000:
 print(f"Meta atingida salário valor atual: R${salario} ")
 """
 
-    curso = input("Qual é o curso mais top?")
 
+curso = str
 while curso != "DS":
+    curso = input("Qual é o curso mais top?")
 print("Acertou, parabéns! :D")
