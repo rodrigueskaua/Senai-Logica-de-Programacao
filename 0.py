@@ -1,10 +1,11 @@
-menu = input("Escolha uma opção: \n1) Continuar no laço \n2) Sair pelo else \n3) Sair pelo break \n")
-while True:
-      if menu == 1:
-            menu = input("Escolha uma opção: \n1) Continuar no laço \n2) Sair pelo else \n3) Sair pelo break \n")
-            continue
-      elif menu == 3:
-            print("saida inesperada")
-            break
-      elif menu == 2:
-            print("saida normal")
+import pandas
+
+emails = open("emails.txt")
+list_emails = sorted(emails.read().lower().replace("\n","").split(";"))
+print("Quantidade de e-mail", len(list_emails))
+assinaturas = pandas.read_csv("Lista de Presença.csv")
+for email in list_emails:
+    if email in assinaturas["Nome de usuário"].values:
+        print(email, "Presente")
+    else:
+        print(email, "Ausente")
