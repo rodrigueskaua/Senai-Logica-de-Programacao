@@ -1,15 +1,18 @@
 """
-O mesmo professor do desafio 19 quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
+Um fabricante paga uma porcentagem de imposto sobre o total de uma venda
+realizada. Esse fabricante conhece a quantidade de unidades de um produto que produziu
+e o valor de cada peça. Ajude este fabricante escrevendo um programa em Python que
+permita a leitura das seguintes informações: quantidade de unidades de um produto
+produzidas, valor (preço) de uma unidade desse produto e porcentagem de imposto a ser
+paga. Depois calcule o valor do imposto a ser pago e imprima na tela esse valor obtido.
 """
 
-from random import shuffle
 
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
-n5 = str(input('Quinto aluno: '))
+quantidade_de_unidades = int(input("Digite a quantidade de unidades do produto produzidas: "))
+valor_unidades = float(input("Digite o valor de uma unidade desse produto: R$"))
+porcentagem_imposto = float(input("Digite a porcentagem do valor do imposto a ser pago (%): "))
+unidades_valor_total = quantidade_de_unidades * valor_unidades
+valor_imposto = unidades_valor_total * porcentagem_imposto / 100
 
-lista = [n1, n2, n2, n4, n5]
-shuffle(lista)
-print(f'A ordem de apresenção dos alunos será {lista}')
+
+print(f"Com o valor total dos produtos sendo R${unidades_valor_total:.2f} o valor do imposto será de: R${valor_imposto:.2f}")

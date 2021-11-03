@@ -1,16 +1,11 @@
 """
-Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.
+O custo ao consumidor de um carro novo é a soma do custo de fábrica com a
+porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que
+a porcentagem do distribuidor seja de 28% e os impostos de 45%, escreva um programa
+em Python que leia o custo de fábrica de um carro e escreva o custo ao consumidor.
 
 """
-from random import choice
 
-n1 = str(input('Primeiro aluno: '))
-n2 = str(input('Segundo aluno: '))
-n3 = str(input('Terceiro aluno: '))
-n4 = str(input('Quarto aluno: '))
-n5 = str(input('Quinto aluno: '))
-
-lista = [n1, n2, n2, n4, n5]
-escolhido = choice(lista) 
-
-print(f'O aluno escolhido foi {escolhido}')
+custo_fabrica = float(input("Digite o custo de fábrica do carro: R$"))
+custo_do_consumidor = custo_fabrica + (custo_fabrica * 0.28) + (custo_fabrica * 0.45)
+print(f"O custo ao consumidor do carro será de: R${custo_do_consumidor:.2f}")
