@@ -1,15 +1,13 @@
 """
-Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
+18. Escreva um programa em Python para ajudar a calcular a quantidade de gotas de um
+remédio que uma determinada criança precisa tomar. A bula desse remédio pediátrico
+recomenda a seguinte dosagem: 5 gotas para cada 2 kg do peso da criança. Você deve
+fazer um programa que leia o peso desta criança, calcule e imprima na tela a quantidade
+de gotas a ser tomada.
 """
-from math import radians, sin, cos, tan
 
-angulo = float(input("Digite o angulo: "))
 
-seno = sin(radians(angulo))
-print(f'O ângulo de {angulo} tem o seno de {seno:.2f}')
+peso_criaca = float(input("Digite o peso da criança (kg): "))
+gotas_quantidade = peso_criaca / 2 * 5
 
-cosseno = cos(radians(angulo))
-print(f'O ângulo de {angulo} tem o cosseno de {cosseno:.2f}')
-
-tangente = tan(radians(angulo))
-print(f'O ângulo de {angulo} tem o tangente de {tangente:.2f}')
+print(f"Para uma criança com {peso_criaca}kg a quantidade de gostas a ser tomadas é {gotas_quantidade}")
