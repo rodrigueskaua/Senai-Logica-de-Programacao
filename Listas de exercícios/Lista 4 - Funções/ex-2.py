@@ -31,4 +31,4 @@ def encontrarQuadrante(angulo):
     
     
 angulo = int(input("Digite o ângulo  com o eixo positivo X: "))
-print(f" Quadrante {encontrarQuadrante(angulo)}")
+print(f"Quadrante {encontrarQuadrante(angulo)}")
